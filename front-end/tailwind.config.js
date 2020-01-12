@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    extend: {}
+    fontFamily:{
+      
+      'display':'pokemon',
+      'display':'pokemon'
+    }
   },
   variants: {},
   plugins: []

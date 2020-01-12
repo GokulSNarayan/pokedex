@@ -37,13 +37,13 @@ export default function Table({ columns, data }) {
   placeholder={"Search name"}
 />
 </div>
-<div className="flex justify-center">
+<div className="flex justify-center overflow-y-auto" style={{maxHeight:'70vh',minHeight:'70vh'}}>
     <table {...getTableProps()} className="table-auto w-1/2 ">
       <thead>
         {headerGroups.map(headerGroup => (
           <tr className="" {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (
-              <th  className="px-4 py-2 border border-gray-400"{...column.getHeaderProps()}>{column.render("Header")}</th>
+              <th  className="px-4 py-2 border border-black"{...column.getHeaderProps()}>{column.render("Header")}</th>
             ))}
           </tr>
         ))}
@@ -54,7 +54,7 @@ export default function Table({ columns, data }) {
           return (
             <tr {...row.getRowProps()}>
               {row.cells.map(cell => {
-                return <td className="border px-4 py-2" {...cell.getCellProps()}>{cell.render("Cell")}</td>;
+                return <td className="border border-black px-4 py-2" {...cell.getCellProps()}>{cell.render("Cell")}</td>;
               })}
             </tr>
           );
